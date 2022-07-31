@@ -1,4 +1,5 @@
 extends ../../layouts/layout
+include ../../components/cart/cart
 include ../../components/search-bar/search-bar
 
 block content
@@ -7,6 +8,7 @@ block content
     const category = ['men\'s clothing', 'jewelery', 'electronics', 'women\'s clothing' ]
 
   main.main
+    +cart
     section.products-section
       .container#productsDesc
         h2.visually-hidden 'Products desc'
