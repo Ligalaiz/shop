@@ -16,7 +16,7 @@
     "test:test": "jest --forceExit --t=#test",
     "test:coverage": "jest --coverage",
     "prepare": "husky install",
-    "server": "json-server -w ./server/index.js -p 3001"
+    "server": "json-server -w ./server/products.db.json -p 3001 -r ./server/routes.json"
   },
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "cssnano": "^5.1.12",
-    "dotenv-webpack": "^7.1.1",
+    "dotenv-webpack": "^8.0.0",
     "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
