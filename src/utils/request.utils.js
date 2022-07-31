@@ -2,7 +2,7 @@ import { delay } from '@utils/delay.utils';
 import { displayError } from '@utils/display-error.utils';
 
 const getAllProducts = async (option) => {
-  const { url = '', n = 2 } = option;
+  const { url = '' } = option;
 
   try {
     const response = await fetch(url);
@@ -21,7 +21,7 @@ const getAllProducts = async (option) => {
 };
 
 const addPurchases = async (option) => {
-  const { url = '', body = {}, n = 3 } = option;
+  const { url = '', body = {} } = option;
 
   try {
     const response = await fetch(url, {
