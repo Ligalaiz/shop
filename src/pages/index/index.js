@@ -1,5 +1,3 @@
-import '../../assets/styles/global/index.scss';
-
-const getSum = (a, b) => a + b;
-
-export { getSum };
+import '@src/layouts/layout';
+import '@components/dropdown/dropdown';
+import '@assets/styles/global/index.scss';
