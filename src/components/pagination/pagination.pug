@@ -1,0 +1,12 @@
+mixin pagination
+  section
+    h2.visually-hidden Pagination bar
+    .container
+      ul.pagination-wrap.reset-list#pagination
+        li
+          button.prev-btn(data-page='prevPage')
+            span.visually-hidden Prev page
+        li
+          button.next-btn(data-page='nextPage')
+            span.visually-hidden Next page
+
