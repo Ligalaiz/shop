@@ -1,0 +1,109 @@
+@use '../../assets/styles/internals/index';
+
+.pagination-wrap {
+  display: flex;
+  max-width: 28.7rem;
+  min-height: 4.1rem;
+  margin-bottom: 3.4rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 5.4rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 6.2rem;
+  }
+}
+
+.prev-btn,
+.next-btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.1rem;
+  min-height: 4.1rem;
+  border: 1px solid $dark-shade-100;
+
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.11;
+  color: $dark-shade-100;
+
+  background-color: $white;
+  cursor: pointer;
+  transition: $animation;
+
+  &:hover:not(.active):not(.disabled) {
+    background-color: $dark-shade-5;
+  }
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &.active {
+    color: $dark-shade-100;
+
+    background-color: $white;
+    cursor: default;
+  }
+
+  &.disabled {
+    border-color: $dark-shade-25;
+
+    color: $dark-shade-25;
+
+    background-color: $dark-shade-5;
+    cursor: default;
+
+    &:before,
+    &:after {
+      border-color: $dark-shade-25;
+    }
+  }
+}
+
+
+.prev-btn,
+.next-btn {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 46%;
+    top: 50%;
+
+    width: 1rem;
+    height: 1rem;
+    border: 0.2rem solid $dark-shade-100;
+    border-top: none;
+    border-right: none;
+  }
+
+  &:after {
+    left: 60%;
+  }
+}
+
+.prev-btn {
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.next-btn {
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+}
