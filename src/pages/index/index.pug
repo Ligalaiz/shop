@@ -1,7 +1,11 @@
 extends ../../layouts/layout
+include ../../components/search-bar/search-bar
+include ../../components/pagination/pagination
 
 block content
-  main
-    section.main
-      h2.visually-hidden 'Main Tittle'
 
+  main.main
+    section.products-section
+      .container#productsDesc
+        h2.visually-hidden 'Products desc'
+        +search-bar({ filter, category })

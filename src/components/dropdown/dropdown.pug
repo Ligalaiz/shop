@@ -1,0 +1,9 @@
+mixin dropdown(option)
+  - const { type = 'button', title = '', data = [], cls = '' } = option;
+
+  div(class=`${cls}-dropdown dropdown-${cls}`)
+    button(type=`${type}`, class=`dropdown-${cls}__btn`, data-name=`${cls}`, id=`${cls}Dropdown`)= title
+    ul.reset-list(class=`dropdown-${cls}__list`, id=`${cls}List`)
+      each val in data
+        li(class=`dropdown-${cls}__item`)
+          p(class=`dropdown-${cls}__text`, data-option=`${val}-${cls}`)= val

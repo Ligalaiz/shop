@@ -1,4 +1,4 @@
-import { getSum } from './index';
+const getSum = (a, b) => a + b;
 
 describe('getSum function', () => {
   it('getSum function check summator', () => {

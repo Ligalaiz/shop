@@ -1,11 +1,11 @@
-const { join } = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const { merge } = require('webpack-merge');
-const { extendDefaultPlugins } = require('svgo');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { merge } = require('webpack-merge');
+const { join } = require('path');
+const { extendDefaultPlugins } = require('svgo');
 
 const { paths, commonConfig } = require('./webpack.common');
 
@@ -97,7 +97,7 @@ module.exports = merge(commonConfig, {
           template: `${paths.pages}/${file.split('.')[0]}/${file}`,
           filename: `./${file.replace(/\.pug/, '.html')}`,
           templateParameters: {
-            title: `${file.split('.')[0]}`,
+            title: 'shop',
             buildTime: '',
             commitHash: '',
             version: '',

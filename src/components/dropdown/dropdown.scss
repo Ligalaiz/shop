@@ -1,0 +1,66 @@
+@use '../../assets/styles/internals/index';
+
+.dropdown-filter,
+.dropdown-category {
+  position: relative;
+
+  max-width: 28rem;
+  width: 100%;
+
+  &__btn {
+    width: 100%;
+    border: 0.1rem solid $dark-shade-50;
+    border-radius: 0.5rem;
+    padding: 0.5em 1rem;
+    min-height: 5rem;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background-color: $white;
+    transition: $animation;
+
+    &:hover {
+      border-color: $primary;
+
+      color: $white;
+
+      box-shadow: $shadow;
+      background-color: $primary;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &__list {
+    position: absolute;
+
+    display: none;
+    max-width: 28rem;
+    width: 100%;
+    z-index: 10;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: 1rem;
+
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+
+      box-shadow: $shadow;
+      background-color: $primary;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use '../../assets/styles/internals/index';
+
+.msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  @include fontz(1.6rem, 1.6, $white);
+
+  background-color: $dark-shade-100;
+  box-shadow: $shadow;
+
+  animation: jump 3s ease-in-out;
+  transform: translateX(-50%);
+
+  &--error {
+    background-color: $red;
+  }
+
+  &.active {
+    display: flex;
+  }
+  z-index: 1000;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateX(-150%);
+  }
+  5% {
+    transform: translateX(5%);
+  }
+  10% {
+    transform: translateX(-5%);
+  }
+  15% {
+    transform: translateX(3%);
+  }
+  20% {
+    transform: translateX(-3%);
+  }
+  25% {
+    transform: translateX(1%);
+  }
+  35% {
+    transform: translateX(-1%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+
+  55% {
+    transform: translateX(1%);
+  }
+
+  60% {
+    transform: translateX(-1%);
+  }
+
+  65% {
+    transform: translateX(3%);
+  }
+
+  70% {
+    transform: translateX(-3%);
+  }
+
+  75% {
+    transform: translateX(5%);
+  }
+
+  80% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
