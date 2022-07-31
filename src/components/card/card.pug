@@ -1,0 +1,16 @@
+mixin card(option)
+  - const { image, name, title, price, rating, category } = option
+
+  .card
+    .card__img
+      img(src=`${image}`, alt=`${name}`)
+    .card__desc
+      p= title
+    .card__wrap
+      .card__rating.rating
+        p.rating__text= rating.rate
+      .card__price.price
+        p.price__text= `${price} $`
+    .card__category
+      p= category
+    button.card__btn buy

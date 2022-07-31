@@ -1,11 +1,14 @@
 extends ../../layouts/layout
 include ../../components/search-bar/search-bar
-include ../../components/pagination/pagination
 
 block content
+  -
+    const filter = ['rating', 'cheap', 'expensive']
+    const category = ['men\'s clothing', 'jewelery', 'electronics', 'women\'s clothing' ]
 
   main.main
     section.products-section
       .container#productsDesc
         h2.visually-hidden 'Products desc'
         +search-bar({ filter, category })
+        .product-list#productList
