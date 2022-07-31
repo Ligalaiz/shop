@@ -1,0 +1,8 @@
+include ../card/card
+
+mixin product-list(option)
+  - const { products } = option;
+
+  .product-list
+    each val in products
+      +card(val)
