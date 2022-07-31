@@ -1,5 +1,5 @@
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![Shop CI](../../actions/workflows/develop.yml/badge.svg)](../../actions/workflows/develop.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/11fbbca6d69539b95251/maintainability)](https://codeclimate.com/github/Ligalaiz/shop/maintainability) [![Netlify Status](https://api.netlify.com/api/v1/badges/44cdd15d-312f-4314-9791-798cc29a8c75/deploy-status)](https://app.netlify.com/sites/ligalaiz-shop/deploys)
 
 
 # Shop
