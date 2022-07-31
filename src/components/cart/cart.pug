@@ -1,0 +1,9 @@
+mixin cart
+  div.cart#cart
+    h2 Cart
+    button.cart__close-btn(data-btn='closeBtn')
+    ul.reset-list.cart__list#cartList
+    .cart__control
+      p.cart__total= 'Total: '
+        span#totalSum
+      button.cart__buy-btn#buyBtn(data-btn='buy') buy
