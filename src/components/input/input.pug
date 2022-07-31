@@ -1,0 +1,4 @@
+mixin input(option)
+  - const { placeholder = '', cls = '', type = 'text' } = option;
+
+  input(class=`${cls}__input`, placeholder=`${placeholder}`, type=`${type}` id='searcField')

@@ -1,5 +1,11 @@
 @use '../../assets/styles/internals/index';
 
 .main {
-  color: $dark-shade-100
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.products-section {
+  flex: 1 1 auto;
 }

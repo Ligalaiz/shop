@@ -1,10 +1,10 @@
-const { join } = require('path');
-const { merge } = require('webpack-merge');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const COMMIT_HASH = require('child_process').execSync('git rev-parse --short HEAD').toString();
+const { join } = require('path');
+const { merge } = require('webpack-merge');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const PKG = require('../package.json');
 const { paths, commonConfig } = require('./webpack.common');
@@ -54,7 +54,7 @@ module.exports = merge(commonConfig, {
           filename: `./${file.replace(/\.pug/, '.html')}`,
           page: `${file.replace(/\.pug/, '.html')}`,
           templateParameters: {
-            title: `${file.split('.')[0]}`,
+            title: 'shop',
             buildTime: `Build at: ${new Date().toISOString()} `,
             commitHash: `Commit hash: ${COMMIT_HASH} `,
             version: `App version: ${JSON.stringify(PKG.version)} `,

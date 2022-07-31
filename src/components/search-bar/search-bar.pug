@@ -1,0 +1,11 @@
+include ../input/input
+include ../dropdown/dropdown
+
+mixin search-bar(option)
+  - const { filter, category } = option
+
+  .search-bar.bar-search#searchBar
+    +input({type: 'text', cls: 'bar-search', placeholder: 'Search'})
+    +dropdown({data: filter, title: 'Choice sort', cls: 'filter'})
+    +dropdown({data: category, title: 'Choice category', cls: 'category'})
+

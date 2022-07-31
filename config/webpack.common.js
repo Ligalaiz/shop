@@ -1,9 +1,9 @@
 const fs = require('fs');
-const { join } = require('path');
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { join } = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const getFiles = (type) => {
   return fs.readdirSync(SRC_PAGES).map((folderName) => {
@@ -74,6 +74,8 @@ module.exports = {
       extensions: ['.js'],
       alias: {
         '@src': SRC_DIR,
+        '@utils': join(SRC_DIR, 'utils'),
+        '@assets': join(SRC_DIR, 'assets'),
         '@components': join(SRC_DIR, 'components'),
       },
     },
@@ -82,6 +84,7 @@ module.exports = {
       new webpack.ProgressPlugin(),
       new Dotenv({
         systemvars: true,
+        safe: false,
       }),
       new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,

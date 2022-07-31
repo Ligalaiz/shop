@@ -60,6 +60,8 @@ module.exports = {
       },
       alias: [
         ['@src', './src'],
+        ['@utils', './src/utils'],
+        ['@assets', './src/assets'],
         ['@components', './src/components'],
       ],
     },
